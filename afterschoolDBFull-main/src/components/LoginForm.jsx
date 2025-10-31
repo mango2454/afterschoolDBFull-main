@@ -6,7 +6,6 @@ import axios from "axios";
 const LoginForm = () => {
   const { login, setLogin } = useContext(TeacherContext);
   const navigate = useNavigate();
-
   // 입력값 변경 핸들러
   const handleChange = (e) => {
     const { name, value } = e.target;
