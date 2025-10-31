@@ -1,0 +1,44 @@
+.ImpormationHead {
+    width: 90%;
+    height: 7vh;
+    border-bottom: 1px solid gray;
+
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    line-height: 7vh;
+
+}
+
+.ImpormationHeadTitle {
+    color: white;
+}
+.ImpormationHeadBtn {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.ImpormationHeadBtn > button {
+    width: 200px;
+    height: 35px;
+    border: none;
+    border-radius: 10px; 
+    background-color: #4B5563;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.ImpormationHeadBtn > button:nth-child(2) {
+    width: 80px;
+    height: 35px;
+    border: none;
+    border-radius: 10px; 
+    background-color: #ff0000;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 35px;
+}

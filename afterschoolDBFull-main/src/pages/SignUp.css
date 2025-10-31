@@ -1,0 +1,171 @@
+.SignUp {
+    background-color: #111827;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.SignUpBg {
+    width: 770px; /* 27인치 기준 */
+    height: 940px;
+    background-color: #1E335C;
+    border-radius: 30px;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.SignUpForm {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 50px;
+}
+
+.Signup {
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    height: 200px;
+    line-height: 200px;
+}
+
+/* input 영역 */
+.inputBox {
+    width: 100%;
+}
+
+/* 이름, 성 같이 2개 입력 */
+.input1 {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+}
+
+.input1 > input {
+    width: 250px;
+    height: 60px;
+    border: none;
+    border-radius: 30px;
+    background-color: #4463A6;
+    color: white;
+    font-size: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* 이메일 같은 단일 입력 */
+.input2 {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.input2 > input {
+    width: 520px;
+    height: 60px;
+    background-color: #4463A6;
+    border: none;
+    border-radius: 30px;
+    font-size: 20px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* 비밀번호/확인 */
+.input3 {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+
+/* 버튼 */
+.Btn, .ClickBtn {
+    width: 250px;
+    height: 60px;
+    border: none;
+    border-radius: 30px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.Btn {
+    background-color: #4463A6;
+}
+
+.ClickBtn {
+    background-color: #004cef;
+    border: 1px solid white;
+}
+
+/* 가입 버튼 영역 */
+.SignBtn {
+    padding-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.SignBtn > button {
+    width: 250px;
+    height: 60px;
+    border: none;
+    border-radius: 30px;
+    background-color: #4463A6;
+    color: white;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.SignBtn > button:hover {
+    background-color: #36508A;
+}
+
+input::placeholder { 
+    color: #CFCCCC; 
+}
+
+/* 📌 맥북 14프로 (1512px 이하) 대응 */
+@media (max-width: 1512px) {
+    .SignUpBg {
+        width: 600px;
+        height: auto;
+        padding: 30px 20px;
+    }
+
+    .SignUpForm {
+        gap: 40px;
+    }
+
+    .Signup {
+        font-size: 24px;
+        height: auto;
+        line-height: 1.5;
+        margin-bottom: 20px;
+    }
+
+    .input1 > input {
+        width: 230px;
+        height: 55px;
+        font-size: 16px;
+    }
+
+    .input2 > input {
+        width: 480px;
+        height: 55px;
+        font-size: 16px;
+    }
+
+    .Btn, .ClickBtn, 
+    .SignBtn > button {
+        width: 230px;
+        height: 55px;
+        font-size: 16px;
+    }
+}

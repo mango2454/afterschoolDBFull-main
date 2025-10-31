@@ -1,0 +1,220 @@
+/* ===========================
+   AddForm 전체 스타일
+=========================== */
+.AddForm {
+  width: 90%;
+  max-width: 900px;
+  background-color: #111827;
+  padding: 30px;
+  border-radius: 12px;
+  color: #fff;
+  margin: 50px auto;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* ===========================
+   한 줄에 두 input 배치
+=========================== */
+.AddFormRow {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.AddFormRow > div {
+  display: flex;
+  flex-direction: column;
+  flex: 1; /* 균등한 너비 */
+}
+
+/* 라벨 스타일 */
+.AddForm label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #e5e7eb;
+}
+
+/* 전체 너비 input/textarea */
+.AddFormRowFull {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.AddFormRowFull label {
+  margin-bottom: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  color: #e5e7eb;
+}
+
+.AddFormRowFull textarea {
+  height: 120px;
+  resize: none;
+  border-radius: 12px;
+  border: none;
+  padding: 12px 16px;
+  background-color: #1f2937;
+  font-size: 16px;
+  color: #fff;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+/* input / textarea 스타일 */
+.AddForm input,
+.AddForm textarea {
+  border-radius: 12px;
+  border: none;
+  padding: 12px 16px;
+  background-color: #1f2937;
+  font-size: 16px;
+  color: #fff;
+  height: 50px;
+  box-sizing: border-box;
+  transition: all 0.2s ease-in-out;
+}
+
+.AddForm input::placeholder,
+.AddForm textarea::placeholder {
+  color: #9ca3af;
+}
+
+.AddForm input:focus,
+.AddForm textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5);
+  background-color: #111827;
+}
+
+/* ===========================
+   상태 버튼
+=========================== */
+.AddFormStateButtons {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.AddFormStateButtons button {
+  padding: 8px 16px;
+  border-radius: 8px;
+  border: none;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.AddFormStateButtons .recruit {
+  background-color: #0f172a;
+  color: #fff;
+}
+.AddFormStateButtons .recruit.active {
+  background-color: #6b7280;
+  color: #fff;
+}
+
+.AddFormStateButtons .end {
+  background-color: #0f172a;
+  color: #fff;
+}
+.AddFormStateButtons .end.active {
+  background-color: #6b7280;
+  color: #fff;
+}
+
+
+
+/* ===========================
+   등록 버튼
+=========================== */
+.AddFormSubmit {
+  text-align: right;
+}
+
+.AddFormSubmit button {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s, transform 0.1s;
+}
+
+.AddFormSubmit button:hover {
+  background-color: #2563eb;
+  transform: translateY(-2px);
+}
+
+.AddFormSubmit button:active {
+  transform: translateY(0);
+}
+
+/* ===========================
+   AddForm 전체 스타일 (맥북14프로 대응)
+=========================== */
+@media screen and (max-width: 1512px) and (min-width: 1400px) {
+  .AddForm {
+    width: 85%;
+    max-width: 800px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4);
+  }
+
+  /* 한 줄에 두 input 배치 */
+  .AddFormRow {
+    gap: 15px;
+    margin-bottom: 16px;
+  }
+
+  .AddFormRow > div {
+    flex: 1;
+  }
+
+  /* 라벨 폰트 크기 */
+  .AddForm label,
+  .AddFormRowFull label {
+    font-size: 13px;
+    margin-bottom: 4px;
+  }
+
+  /* 전체 너비 textarea */
+  .AddFormRowFull textarea {
+    height: 100px;
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+
+  /* input / textarea */
+  .AddForm input,
+  .AddForm textarea {
+    height: 44px;
+    padding: 10px 14px;
+    font-size: 15px;
+  }
+
+  /* 상태 버튼 */
+  .AddFormStateButtons {
+    gap: 10px;
+    margin-bottom: 16px;
+  }
+
+  .AddFormStateButtons button {
+    padding: 6px 14px;
+    font-size: 14px;
+    border-radius: 6px;
+  }
+
+  /* 등록 버튼 */
+  .AddFormSubmit button {
+    padding: 8px 16px;
+    font-size: 15px;
+    border-radius: 6px;
+  }
+}

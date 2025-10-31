@@ -1,0 +1,13 @@
+.AdminPage {
+    display: flex;
+}
+
+/* 메인 부분 */
+.Main {
+    flex: 1;
+    height: 100vh;
+    background-color: #123458;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+}

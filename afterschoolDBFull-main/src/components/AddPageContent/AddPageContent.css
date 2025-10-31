@@ -1,0 +1,22 @@
+.AddPageContent {
+  width: 100%;
+  height: 100vh; /* 전체 화면 기준이면 vh 단위로! */
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* 세로 가운데 */
+  align-items: center; /* 가로 가운데 */
+  color: white;
+}
+
+
+
+.AddPageContent > div > button {
+    width: 200px;
+    height: 60px;
+    border-radius: 10px;
+    border: none;
+    background-color: #257ED8;
+    color: white;
+    font-size: 20px;
+}

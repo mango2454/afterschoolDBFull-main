@@ -1,0 +1,27 @@
+.RegisterListHead {
+    width: 90%;
+    height: 10vh;
+    margin: 0 auto;
+    line-height: 10vh;
+    color: white;
+    display: flex;
+    border-bottom: 1px solid white;
+    justify-content: space-between;
+}
+
+.RegisterListHeadBtn > button:nth-child(1) {
+    width: 150px;
+    height: 40px;
+    background-color: #4B5563;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+}
+.RegisterListHeadBtn > button:nth-child(2) {
+    width: 100px;
+    height: 40px;
+    background-color: #3DA0CB;
+    border-radius: 30px;
+    color: white;
+    font-weight: bold;
+}

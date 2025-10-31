@@ -1,0 +1,24 @@
+.AttendStudentNav {
+    width: 90%;
+    height: 15vh;
+    border: 1px solid white;
+    border-radius: 30px;
+    margin: 0 auto;
+    margin-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.AttendStudentNavTitle {
+    color: white;
+    padding-left: 50px;
+}
+
+.AttendStudentNavContent {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    padding-right: 30px;
+}

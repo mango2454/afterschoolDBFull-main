@@ -1,0 +1,39 @@
+.AddNav {
+  width: 85%;                  /* 좌우 여백 고려 */
+  height: 15vh;                /* 맥북 14 화면 높이의 15% (약 290px) */
+  margin: 40px auto 0 auto;
+  background-color: #1F2937;
+  border: 1px solid white;
+  border-radius: 30px;          /* 화면 비율 기반 padding */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2vh;         
+  color: white;          /* 요소 간 간격 */
+}
+
+.AddNav > div > input {
+  width: 28vw;                 /* 맥북 14 기준 약 850px 정도 */
+  height: 5vh;                 /* 약 95px */
+  border: none;
+  border-radius: 10px;
+  background-color: #4B5563;
+  padding-left: 1vw;
+  font-size: 1rem;             /* 기본 텍스트 크기 */
+  color: white;
+}
+
+/* 혹시 다른 기기에서 열었을 때 깨짐 방지 */
+@media screen and (max-width: 1520px) {
+  .AddNav {
+    width: 87%;
+    height: auto;
+    padding: 15px;
+  }
+
+  .AddNav > div > input {
+    width: 28vw;
+    height: 45px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,54 @@
+.AddHead {
+    width: 90%;
+    height: 7vh;
+    border-bottom: 1px solid #808080;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title {
+    line-height: 7vh;
+    color: white;
+    white-space: nowrap;
+}
+.right  {
+    display: flex;
+    align-items: center;
+
+}
+
+.btn1 {
+    width: 150px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 17px;
+
+}
+
+.btn2 {
+        width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    font-size: 17px;
+}
+
+button {
+    border: none;
+    margin: 10px;
+
+}
+
+.right {
+  display: flex;
+  align-items: center;
+}
+
+
+
+/* 활성화 버튼 색상 */
+.btn1.active, .btn2.active {
+  background-color: #3B82F6;
+  color: white;
+}
+

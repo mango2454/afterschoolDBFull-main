@@ -1,0 +1,42 @@
+.RegisterHead {
+    width: 90%;
+    height: 10vh;
+    border-bottom: 1px solid white;
+    display: flex;
+    justify-content: space-between;
+    line-height: 10vh;
+    margin: 0 auto;
+    
+}
+
+.RegisterHeadTitle {
+    color: white;
+    font-size: 20px;
+}
+
+.RegisterHeadBtn {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.RegisterHeadBtn > button {
+    color: white;
+    font-size: 18px;
+}
+
+.RegisterHeadBtn > button:nth-child(1) {
+    width: 200px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #3B82F6;
+
+}
+
+.RegisterHeadBtn > button:nth-child(2) {
+    width: 100px;
+    height: 50px;
+    border-radius: 30px;
+    background-color: #4B5563;
+
+}

@@ -1,0 +1,31 @@
+.AdminTeacherNav {
+    width: 90%;
+    height: 20vh;
+    border-radius: 30px;
+    border: 1px solid white;
+    background-color: #1f2937;
+    margin: 0 auto;
+    margin-top: 20px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.AdminTeacherNavTitle {
+    padding-left: 30px;
+}
+
+.AdminTeacherNavInput {
+    padding-left: 30px;
+}
+.AdminTeacherNavInput > input{
+    width: 250px;
+    height: 40px;
+    background-color: #4B5563;
+    border: none;
+    color: white;
+    padding-left: 20px;
+    border-radius: 30px;
+}

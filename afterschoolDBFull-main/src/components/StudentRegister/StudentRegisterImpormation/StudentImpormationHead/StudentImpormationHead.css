@@ -1,0 +1,32 @@
+.StudentImpormationHead {
+    width: 90%;
+    height: 10vh;
+    border-bottom: 1px solid white;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    line-height: 10vh;
+    color: white;
+
+      overflow-y: auto;
+  overflow-x: hidden;
+
+  /* 스크롤바 숨기기 */
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
+}
+
+.StudentImpormationHeadBtn > button:nth-child(1) {
+    width: 150px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #4B5563;
+    color: white;
+}
+.StudentImpormationHeadBtn > button:nth-child(2) {
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #3DA0CB;
+    color: white;
+}

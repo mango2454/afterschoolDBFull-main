@@ -1,0 +1,7 @@
+.MainContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* 가로 가운데 */
+    align-items: center;     /* 세로 가운데 */
+    height: 100vh;           /* 부모 높이를 화면 전체로 설정 */
+}

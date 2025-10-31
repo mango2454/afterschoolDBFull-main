@@ -1,0 +1,34 @@
+.StudentRegisterNav {
+    width: 90%;
+    height: 15vh;
+    border: 1px solid white;
+    margin: 0 auto;
+    margin-top: 20px;
+    border-radius: 30px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 30px;
+
+    background-color: #1F2937;
+}
+.main-title {
+    padding-left: 30px;
+    color: white;
+}
+
+.search-box  {
+    padding-left: 30px;
+}
+
+.search-box > input {
+    width: 300px;
+    height: 30px;
+    outline: none;
+    background-color: #4B5563;
+    border: none;
+    padding-left: 10px;
+    color: white;
+    border-radius: 10px;
+}

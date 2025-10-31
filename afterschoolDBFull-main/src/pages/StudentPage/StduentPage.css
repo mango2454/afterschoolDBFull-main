@@ -1,0 +1,105 @@
+.StudentPage {
+    display: flex;
+}
+
+/* 메인 부분 */
+.Main {
+    flex: 1;
+    height: 100vh;
+    background-color: #123458;
+    /* display: flex; */
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.MainTitle {
+    color: white;
+    font-size: 20px;
+}
+
+.MainBtn > button {
+    margin: 20px;
+    border: none;
+    width: 150px;
+    height: 50px;
+    background-color: #257ED8;
+    border-radius: 30px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.MainBtn > button:hover {
+    background-color: #1b62a6;
+}
+
+/* 사이드바 */
+.SideBar {
+    background-color: #111827;
+    height: 100vh;
+    width: 250px; /* 27인치 기준 */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.SideHeader {
+    width: 100%;
+    height: 7vh;
+    text-align: center;
+    line-height: 7vh;
+    border-bottom: 1px solid #777676;
+}
+
+.SideMain {
+    width: 100%;
+    flex: 1; /* 자동 확장 */
+}
+
+.SideFooter {
+    width: 100%;
+    height: 7vh;
+    border-top: 1px solid #777676;
+    text-align: center;
+    line-height: 7vh;
+}
+
+/* 📌 맥북 14프로 대응 */
+@media (max-width: 1512px) {
+
+    .SideHeader {
+        width: 100%;
+        height: 10vh;
+        text-align: center;
+        line-height: 10vh;
+        border-bottom: 1px solid #777676;
+    }
+
+    .SideFooter {
+    width: 100%;
+    height: 10vh;
+    border-top: 1px solid #777676;
+    text-align: center;
+    line-height: 7vh;
+    }
+
+    .SideBar {
+        width: 200px;
+    }
+
+    .Main {
+        width: calc(100vw - 200px);
+    }
+
+    .MainTitle {
+        font-size: 18px;
+    }
+
+    .MainBtn > button {
+        width: 130px;
+        height: 45px;
+        font-size: 15px;
+    }
+}

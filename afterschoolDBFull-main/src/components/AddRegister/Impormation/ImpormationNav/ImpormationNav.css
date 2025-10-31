@@ -1,0 +1,86 @@
+.ImpormationNav {
+    
+    width: 90%;
+    height: 250px;
+    margin: 0 auto;
+    margin-top: 30px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 40px;
+    border-radius: 20px;
+
+    background-color: #1F2937;
+}
+
+.ImpormationNavTitle {
+    font-size: 20px;
+    color: white;
+    padding-left: 40px;
+}
+
+
+.ImpormationNavContent {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+}
+
+.ImpormationNavContent > div {
+    width: 330px;
+    height: 102px;
+    background-color: #4B5563;
+    border-radius: 20px;
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    color: white;
+
+}
+
+.ImpormationNavContent > div > h3, h4{
+    padding-left: 30px;
+}
+
+@media screen and (max-width: 1512px) {
+  .ImpormationNav {
+    width: 90%;
+    height: 200px;
+    margin-top: 25px;
+    border-radius: 16px;
+    gap: 30px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .ImpormationNavTitle {
+    font-size: 18px;
+    padding-left: 20px;
+  }
+
+  .ImpormationNavContent {
+    display: flex;
+
+    gap: 20px;
+    justify-content: flex-start;
+  }
+
+  .ImpormationNavContent > div {
+    width: 250px;
+    min-height: 90px;
+    border-radius: 16px;
+    gap: 8px;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .ImpormationNavContent > div > h3,
+  .ImpormationNavContent > div > h4 {
+    padding-left: 10px;
+    font-size: 14px;
+    margin: 0;
+  }
+}

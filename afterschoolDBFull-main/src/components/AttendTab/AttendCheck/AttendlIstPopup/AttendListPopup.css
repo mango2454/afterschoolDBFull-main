@@ -1,0 +1,108 @@
+.AttendListPopup {
+  width: 600px;
+  height: 500px;
+  background-color: #2A3855;
+  
+  position: fixed; /* 화면 전체 기준 */
+  top: 50%;
+  left: 55%;
+  transform: translate(-50%, -50%); /* 가운데로 이동 */
+
+  z-index: 3;
+  border-radius: 10px;
+
+  color: white;
+}
+
+.AttendListPopupTitle {
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.AttendListPopupTitle > h1 {
+    padding-left: 30px;
+}
+.AttendListPopupTitle > h2 {
+    font-size: 40px;
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+.AttendListContent {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+.AttendListContent > div>  h3 {
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.AttendListContent > div > div {
+    width: 200px;
+    height: 100px;
+    background-color: #777676;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 30px;
+}
+
+.AttendListContent2 {
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+.AttendListContent2 > div>  h3 {
+    padding: 10px;
+    padding-left: 20px;
+}
+
+.AttendListContent2 > div > div {
+    width: 200px;
+    height: 100px;
+    background-color: #777676;
+    text-align: center;
+    line-height: 100px;
+    border-radius: 30px;
+}
+
+.AttendListBtn {
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    
+}
+
+.AttendListBtn > button:nth-child(1) {
+    width: 70px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    background-color: blue;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+
+}
+
+.AttendListBtn > button:nth-child(2) {
+    width: 70px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    background-color: red;
+    color: white;
+    text-align: center;
+    line-height: 30px;
+
+}

@@ -1,0 +1,28 @@
+.AdminTeacherHead {
+    width: 90%;
+    height: 10vh;
+    border-bottom: 1px solid white;
+    margin: 0 auto;
+    line-height: 10vh;
+
+    display: flex;
+    justify-content: space-between;
+
+    color: white;
+
+}
+
+.AdminTeacherHeadBtn > button:nth-child(1) {
+    width: 150px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #3B82F6;
+    color: white;
+}
+.AdminTeacherHeadBtn > button:nth-child(2) {
+    width: 100px;
+    height: 40px;
+    border-radius: 30px;
+    background-color: #4B5563;
+    color: white;
+}
