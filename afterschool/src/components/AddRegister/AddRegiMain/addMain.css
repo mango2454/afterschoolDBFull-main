@@ -1,0 +1,67 @@
+.AddMain {
+  width: 90%;
+  height: clamp(50vh, 60vh, 65vh); /* 높이 줄여서 여백 확보 */
+  border: 1px solid white;
+  margin: 40px auto 0 auto;
+  border-radius: 20px;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  /* 스크롤바 숨기기 */
+  -ms-overflow-style: none;  
+  scrollbar-width: none;     
+}
+
+.AddMain::-webkit-scrollbar {
+  display: none;
+}
+
+.AddMainTitle {
+  width: 100%;
+  height: clamp(45px, 5vh, 60px);
+  line-height: clamp(45px, 5vh, 60px);
+  color: white;
+
+    display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 5컬럼 균등 분배 */
+  text-align: center;
+
+  position: sticky;
+  top: 0;
+
+  background-color: #4B5563;
+  border-radius: 20px 20px 0 0;
+  border-top: 1px solid white;
+}
+
+
+
+/* 큰 화면 (맥북 프로 14 이상) */
+@media screen and (max-width: 1512px){
+  .AddMain {
+    width: 95%;
+    height: 60vh; /* 기존보다 줄여서 짤림 방지 */
+
+  }
+
+.AddMainTitle {
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); /* 5컬럼 균등 분배 */
+
+  font-size: 18px;
+  text-align: center;
+  align-items: center; /* 세로 중앙 정렬 */
+}
+
+/* 컬럼 안 글자 줄 바꿈 방지 */
+.AddMainTitle > * {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+}
+

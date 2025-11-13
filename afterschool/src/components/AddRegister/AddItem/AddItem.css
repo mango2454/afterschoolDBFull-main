@@ -1,0 +1,96 @@
+.AddItem {
+  width: 100%;
+  height: 100px; /* 1520px 화면에서 적당한 높이 */
+  border: 1px solid #ffffff;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr); 
+
+  color: #fff;
+}
+
+.AddItem > div {
+  flex: 1; /* 6칸 자동 분배 */
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 16px;
+}
+
+/* 버튼 스타일 */
+.AddItemManage > button {
+  width:  60px;
+  height: clamp(28px, 4vh, 35px);
+  border: none;
+  border-radius: 15px;
+  color: white;
+  cursor: pointer;
+  transition: 0.2s;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.AddItemManage > button:nth-child(1) {
+  background-color: #2563EB; /* 파랑 */
+}
+.AddItemManage > button:nth-child(2) {
+  background-color: #00ff3c; /* 초록 */
+}
+.AddItemManage > button:nth-child(3) {
+  background-color: #ff0000; /* 빨강 */
+}
+
+/* 📱 작은 화면 대응 (1024px 이하) */
+/* 맥북 14프로 가로 기준 반응형 */
+@media screen and (max-width: 1520px) {
+  .AddItem {
+    height: 100px;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    text-align: center;
+    padding: 0 10px; /* 좌우 여백 */
+  }
+
+  .AddItenTitle {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .AddItemTeacher,
+  .AddItemTime,
+  .AddItemLimit,
+  .AddItemState {
+    line-height: 100px;
+  } 
+
+  .AddItem > div {
+    
+    text-align: center;
+    font-size: 15px;
+    overflow: hidden; /* 글자가 넘치면 숨김 */
+    text-overflow: ellipsis; /* ... 처리 */
+    white-space: nowrap;
+  }
+
+  .AddItemManage {
+    display: flex;
+    gap: 5px; /* 버튼 사이 간격 */
+    flex-shrink: 0; /* 버튼 영역 줄어들지 않게 */
+    align-items: center;
+
+  }
+
+  .AddItemManage > button {
+    padding: 5px 10px;
+    font-size: 14px;
+    border-radius: 6px;
+    cursor: pointer;
+    white-space: nowrap; /* 줄바꿈 방지 */
+    color: black;
+    font-weight: bold;
+  }
+}
+
+
+
