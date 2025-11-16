@@ -9,7 +9,7 @@ const RegisterMain = () => {
                     <ul>
                         <li>학생정보</li>
                         <li>신청프로그램</li>
-                        <li>신청일</li>
+                        <li>전화번호</li>
                         <li>상태</li>
                         <li>관리</li>
                     </ul>

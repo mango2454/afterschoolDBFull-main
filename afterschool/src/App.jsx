@@ -1,6 +1,8 @@
+// App.jsx
+
 import { Routes, Route, BrowserRouter } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { TeacherContext } from "./context/TeacherContext"; // Context import
+import { TeacherContext } from "./context/TeacherContext";
 
 import Mainpage from "./pages/Mainpage";
 import Login from "./pages/Login";
@@ -14,15 +16,15 @@ import Add from "./components/AddRegister/Add/Add";
 import StudentPage from "./pages/StudentPage/StduentPage";
 import AdminPage from "./pages/AdminPage/AdminPage";
 
-
+// ---------------- Mock Data ----------------
 const RegisterSituationData = [
   {
     id: 1,
     title: "UI구현",
-    sumRegister: 25, // 총신청수
-    check: 15, //출석
-    not: 10, //결석
-    state: "10/15"
+    sumRegister: 25,
+    check: 15,
+    not: 10,
+    state: "10/15",
   },
   {
     id: 2,
@@ -30,15 +32,15 @@ const RegisterSituationData = [
     sumRegister: 25,
     check: 15,
     not: 10,
-    state: "10/15"
+    state: "10/15",
   },
 ];
 
-const mockData =[
-    {
+const mockData = [
+  {
     id: 1,
     title: "UI구현",
-    grade:"2학년",
+    grade: "2학년",
     class: "406호",
     price: "무료",
     teacher: "김교수",
@@ -46,13 +48,13 @@ const mockData =[
     limit: "0/20",
     material: "준비물없음",
     explanation: "방과후설명입니다.",
-    week:"12주",
-    state: "모집중"
-    },
-    {
+    week: "12주",
+    state: "모집중",
+  },
+  {
     id: 1,
     title: "UI구현",
-    grade:"2학년",
+    grade: "2학년",
     class: "406호",
     price: "무료",
     teacher: "김교수",
@@ -60,10 +62,10 @@ const mockData =[
     limit: "0/20",
     material: "준비물없음",
     explanation: "방과후설명입니다.",
-    week:"12주",
-    state: "모집중"
-    },
-]
+    week: "12주",
+    state: "모집중",
+  },
+];
 
 const RegisterData = [
   {
@@ -74,7 +76,7 @@ const RegisterData = [
     reason: "감기",
     reigisterProgram: "UI구현",
     registerDate: "2023-01-01",
-    state: "데기중",
+    state: "대기중",
   },
   {
     id: 2,
@@ -84,10 +86,9 @@ const RegisterData = [
     reason: "감기",
     reigisterProgram: "UI구현",
     registerDate: "2023-01-01",
-    state: "데기중",
+    state: "대기중",
   },
 ];
-
 
 const addedStudentData = [
   {
@@ -95,85 +96,98 @@ const addedStudentData = [
     name: "김철수",
     phone: "010-1111-2222",
     grade: "20301",
-    state: "재학중"
+    state: "재학중",
   },
   {
     id: 2,
     name: "김철수",
     phone: "010-2222-2222",
     grade: "20302",
-    state: "재학중"
+    state: "재학중",
   },
   {
     id: 3,
     name: "김철수",
     phone: "010-3333-2222",
     grade: "20303",
-    state: "재학중"
+    state: "재학중",
   },
   {
     id: 4,
     name: "김철수",
     phone: "010-4444-2222",
     grade: "20303",
-    state: "재학중"
+    state: "재학중",
   },
-]
+];
 
 const adminTeacherData = [
-  {
-    id: 1,
-    name: "김교수",
-    phone: "010-1234-1234"
-  },
-  {
-    id: 2,
-    name: "박교수",
-    phone: "010-1234-1234"
-  },
-  {
-    id: 3,
-    name: "검교수",
-    phone: "010-1234-1234"
-  },
-]
+  { id: 1, name: "김교수", phone: "010-1234-1234" },
+  { id: 2, name: "박교수", phone: "010-1234-1234" },
+  { id: 3, name: "검교수", phone: "010-1234-1234" },
+];
 
-
+// --------------------------------------------------------
 
 function App() {
-  const [active, setActive] = useState(0); // 프로그램 목록 / 등록하기
-  const [activeIndex, setActiveIndex] = useState(0); // 사이드 메뉴 인덱스
+  // 탭 · UI 상태들
+  const [active, setActive] = useState(0);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [mode, setMode] = useState("nomal");
-  const [registerActive, setRegisterActive] = useState(0) //출석관리 
-  const [attendActive, setAttendActive] = useState("class")
-  const [popup, setPopup] = useState(false)
-  const [listPopup, setListPopup] = useState(false)
-  const [activeComponents, setActiveComponents] = useState('main')
-  const [studentRegister, setStudentRegister] = useState('student')
+  const [registerActive, setRegisterActive] = useState(0);
+  const [attendActive, setAttendActive] = useState("class");
+  const [popup, setPopup] = useState(false);
+  const [listPopup, setListPopup] = useState(false);
+  const [activeComponents, setActiveComponents] = useState("main");
+  const [studentRegister, setStudentRegister] = useState("student");
   const [activeTab, setActiveTab] = useState("firstpage");
-  const [programPopup, setProgramPopup] = useState(false)
-  const [change, setChange] = useState(true)
+  const [programPopup, setProgramPopup] = useState(false);
+  const [change, setChange] = useState(true);
   const [selectedAfterSchoolId, setSelectedAfterSchoolId] = useState(null);
-    const [searchTerm, setSearchTerm] = useState(""); // ✅ 검색어 상태
+  const [searchTerm, setSearchTerm] = useState("");
+   const [selectedTitle, setSelectedTitle] = useState("");
 
+   const [registerData, setRegisterData] = useState([]);
+
+   const [selectedDate, setSelectedDate] = useState("");
+
+   const [selectedStudent, setSelectedStudent] = useState(null); // 선택한 학생
+
+  // 회원가입 상태
   const [signUp, setSignUp] = useState({
     id: "",
-    name:"",
-    password:"",
-    role:"",
-    phone:""
-  })
+    name: "",
+    password: "",
+    role: "",
+    phone: "",
+  });
 
+  // ---------------- Login 상태 통일 구조 ----------------
+  const defaultLogin = {
+    id: "",
+    password: "",
+    name: "",
+    type: "",
+    phone: "",
+  };
 const [login, setLogin] = useState(() => {
+  // 새로고침 시 localStorage에서 가져오기
   const saved = localStorage.getItem("login");
-  return saved ? JSON.parse(saved) : { id: "", password: "", name: "" , phone:""};
+  const sessionSaved = sessionStorage.getItem("login"); // 새 창 로그인 대비
+  return sessionSaved
+    ? JSON.parse(sessionSaved)
+    : saved
+    ? JSON.parse(saved)
+    : { id: "", password: "", name: "", phone: "", type: "" };
 });
 
 useEffect(() => {
+  // 상태 변경 시 localStorage + sessionStorage 동기화
   localStorage.setItem("login", JSON.stringify(login));
-}, [login])
+  sessionStorage.setItem("login", JSON.stringify(login));
+}, [login]);
 
-
+  // --------------------------------------------------------
 
   return (
     <TeacherContext.Provider
@@ -215,6 +229,14 @@ useEffect(() => {
         setSelectedAfterSchoolId,
         searchTerm,
         setSearchTerm,
+        registerData,
+        setRegisterData,
+        selectedTitle,
+        setSelectedTitle,
+        selectedDate,
+        setSelectedDate,
+        selectedStudent,
+        setSelectedStudent,
       }}
     >
       <BrowserRouter>
@@ -229,23 +251,23 @@ useEffect(() => {
           />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<SignUp />} />
+
+          {/* Teacher */}
           <Route
             path="/teacheradd"
-            element={
-              <TeacherAdd SideList={<SideList />} TabMenu={<TabMenu />} />
-            }
+            element={<TeacherAdd SideList={<SideList />} TabMenu={<TabMenu />} />}
           />
+
+          {/* Student */}
           <Route
             path="/studentpage"
-            element={
-              <StudentPage SideList={<SideList />} TabMenu={<TabMenu />} />
-            }
+            element={<StudentPage SideList={<SideList />} TabMenu={<TabMenu />} />}
           />
+
+          {/* Admin */}
           <Route
             path="/adminpage"
-            element={
-              <AdminPage SideList={<SideList />} TabMenu={<TabMenu />} />
-            }
+            element={<AdminPage SideList={<SideList />} TabMenu={<TabMenu />} />}
           />
         </Routes>
       </BrowserRouter>

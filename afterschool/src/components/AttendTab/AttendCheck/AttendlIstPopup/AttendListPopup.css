@@ -51,6 +51,7 @@
     text-align: center;
     line-height: 100px;
     border-radius: 30px;
+    padding-left: 20px;
 }
 
 .AttendListContent2 {
@@ -58,7 +59,7 @@
     height: 25%;
     display: flex;
     justify-content: space-around;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .AttendListContent2 > div>  h3 {
     padding: 10px;

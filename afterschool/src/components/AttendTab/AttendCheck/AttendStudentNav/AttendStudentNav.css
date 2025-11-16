@@ -22,3 +22,9 @@
     color: white;
     padding-right: 30px;
 }
+
+.AttendPopUpContent2 button.active {
+  background-color: #4caf50; /* 선택된 버튼 배경 */
+  color: white; /* 글자 색 */
+  border-color: #4caf50;
+}
