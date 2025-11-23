@@ -26,7 +26,7 @@ const StudentApplyPopup = ({ onClose }) => {
     try {
       const res = await axios.post(
         "http://localhost:8083/afterschool_(1)/ApplyAfterSchool.jsp",
-        null, // 바디는 없음
+        null,
         {
           params: {
             afterschool_id: selectedAfterSchoolId,
@@ -37,15 +37,40 @@ const StudentApplyPopup = ({ onClose }) => {
         }
       );
 
-      if (res.data.result === "success") {
-        alert("신청이 완료되었습니다!");
-        onClose();
-      } else {
-        alert("신청에 실패했습니다.");
+      const result = res.data.result;
+
+      // ============================
+      //   📌 백엔드 반환값 처리
+      // ============================
+      switch (result) {
+        case "success":
+          alert("신청이 완료되었습니다!");
+          onClose();
+          break;
+
+        case "full":
+          alert("정원이 모두 찼습니다! 더 이상 신청할 수 없습니다.");
+          break;
+
+        case "duplicate":
+          alert("이미 신청한 학생입니다!");
+          break;
+
+        case "closed":
+          alert("이 방과후는 마감되어 신청할 수 없습니다.");
+          break;
+
+        case "error":
+          alert("서버 오류가 발생했습니다.");
+          break;
+
+        default:
+          alert("신청에 실패했습니다.");
+          break;
       }
     } catch (err) {
       console.error(err);
-      alert("서버 오류가 발생했습니다.");
+      alert("서버 통신 오류가 발생했습니다.");
     }
   };
 
