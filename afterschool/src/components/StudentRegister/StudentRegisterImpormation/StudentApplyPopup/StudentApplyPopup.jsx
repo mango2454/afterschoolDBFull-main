@@ -28,6 +28,7 @@ const StudentApplyPopup = ({ onClose }) => {
         "http://localhost:8083/afterschool_(1)/ApplyAfterSchool.jsp",
         null,
         {
+          withCredentials: true,
           params: {
             afterschool_id: selectedAfterSchoolId,
             name: form.name,
@@ -39,31 +40,26 @@ const StudentApplyPopup = ({ onClose }) => {
 
       const result = res.data.result;
 
-      // ============================
-      //   📌 백엔드 반환값 처리
-      // ============================
       switch (result) {
         case "success":
           alert("신청이 완료되었습니다!");
           onClose();
           break;
-
         case "full":
           alert("정원이 모두 찼습니다! 더 이상 신청할 수 없습니다.");
           break;
-
         case "duplicate":
           alert("이미 신청한 학생입니다!");
           break;
-
         case "closed":
           alert("이 방과후는 마감되어 신청할 수 없습니다.");
           break;
-
+        case "phone_mismatch":
+          alert("회원 정보의 전화번호와 신청 시 입력한 전화번호가 일치하지 않습니다.");
+          break;
         case "error":
           alert("서버 오류가 발생했습니다.");
           break;
-
         default:
           alert("신청에 실패했습니다.");
           break;

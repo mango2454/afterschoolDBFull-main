@@ -33,7 +33,10 @@ const Login = () => {
       const res = await axios.post(
         "http://localhost:8083/afterschool_(1)/Login.jsp",
         params.toString(),
-        { headers: { "Content-Type": "application/x-www-form-urlencoded" } }
+        { headers: { "Content-Type": "application/x-www-form-urlencoded" },
+      withCredentials: true,
+     }
+        
       );
 
       const data = res.data;

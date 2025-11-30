@@ -31,14 +31,24 @@
 }
 
 .ImpormationHeadBtn > button:nth-child(2) {
-    width: 80px;
+    width: 150px;
     height: 35px;
     border: none;
     border-radius: 10px; 
-    background-color: #ff0000;
+    background-color: #00f504;
     color: white;
     font-size: 16px;
     cursor: pointer;
     text-align: center;
     line-height: 35px;
 }
+
+  .ImportantBtn > button {
+    width: 150px;
+    height: 30px;
+    font-size: 17px;
+    border-radius: 10px;
+    background-color: chartreuse;
+    font-weight: bold;
+    
+  }

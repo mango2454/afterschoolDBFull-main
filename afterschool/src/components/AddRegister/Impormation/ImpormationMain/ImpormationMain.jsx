@@ -49,9 +49,6 @@ const ImpormationMain = () => {
           <h2>담당선생님</h2>
           <h3>{data.afterschool_teacher}</h3>
         </div>
-        <div className="ImportantBtn">
-          <button onClick={() => setChange(false)}>수정</button>
-        </div>
       </div>
     );
   }

@@ -98,13 +98,4 @@
     margin-top: 20px;
   }
 
-  .ImportantBtn > button {
-    width: 150px;
-    height: 50px;
-    font-size: 17px;
-    border-radius: 10px;
-    background-color: chartreuse;
-    font-weight: bold;
-    
-  }
 }

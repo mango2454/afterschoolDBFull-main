@@ -143,6 +143,7 @@ const AddForm = () => {
             type="text"
             name="afterschool_max"
             onChange={handleChange}
+            placeholder="ex) 20 숫자만입력"
             value={form.afterschool_max}
           />
         </div>

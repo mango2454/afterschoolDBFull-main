@@ -16,116 +16,9 @@ import Add from "./components/AddRegister/Add/Add";
 import StudentPage from "./pages/StudentPage/StduentPage";
 import AdminPage from "./pages/AdminPage/AdminPage";
 
-// ---------------- Mock Data ----------------
-const RegisterSituationData = [
-  {
-    id: 1,
-    title: "UI구현",
-    sumRegister: 25,
-    check: 15,
-    not: 10,
-    state: "10/15",
-  },
-  {
-    id: 2,
-    title: "UI구현",
-    sumRegister: 25,
-    check: 15,
-    not: 10,
-    state: "10/15",
-  },
-];
 
-const mockData = [
-  {
-    id: 1,
-    title: "UI구현",
-    grade: "2학년",
-    class: "406호",
-    price: "무료",
-    teacher: "김교수",
-    time: "월,수,금:17:00~18:00",
-    limit: "0/20",
-    material: "준비물없음",
-    explanation: "방과후설명입니다.",
-    week: "12주",
-    state: "모집중",
-  },
-  {
-    id: 1,
-    title: "UI구현",
-    grade: "2학년",
-    class: "406호",
-    price: "무료",
-    teacher: "김교수",
-    time: "월,수,금:17:00~18:00",
-    limit: "0/20",
-    material: "준비물없음",
-    explanation: "방과후설명입니다.",
-    week: "12주",
-    state: "모집중",
-  },
-];
 
-const RegisterData = [
-  {
-    id: 1,
-    name: "김철수",
-    studentNumber: 20301,
-    AttendCheck: "결석",
-    reason: "감기",
-    reigisterProgram: "UI구현",
-    registerDate: "2023-01-01",
-    state: "대기중",
-  },
-  {
-    id: 2,
-    name: "박철수",
-    studentNumber: 20302,
-    AttendCheck: "결석",
-    reason: "감기",
-    reigisterProgram: "UI구현",
-    registerDate: "2023-01-01",
-    state: "대기중",
-  },
-];
 
-const addedStudentData = [
-  {
-    id: 1,
-    name: "김철수",
-    phone: "010-1111-2222",
-    grade: "20301",
-    state: "재학중",
-  },
-  {
-    id: 2,
-    name: "김철수",
-    phone: "010-2222-2222",
-    grade: "20302",
-    state: "재학중",
-  },
-  {
-    id: 3,
-    name: "김철수",
-    phone: "010-3333-2222",
-    grade: "20303",
-    state: "재학중",
-  },
-  {
-    id: 4,
-    name: "김철수",
-    phone: "010-4444-2222",
-    grade: "20303",
-    state: "재학중",
-  },
-];
-
-const adminTeacherData = [
-  { id: 1, name: "김교수", phone: "010-1234-1234" },
-  { id: 2, name: "박교수", phone: "010-1234-1234" },
-  { id: 3, name: "검교수", phone: "010-1234-1234" },
-];
 
 // --------------------------------------------------------
 
@@ -196,13 +89,13 @@ useEffect(() => {
         setActive,
         activeIndex,
         setActiveIndex,
-        mockData,
+
         mode,
         setMode,
-        RegisterData,
+
         registerActive,
         setRegisterActive,
-        RegisterSituationData,
+
         attendActive,
         setAttendActive,
         popup,
@@ -217,8 +110,7 @@ useEffect(() => {
         setActiveTab,
         programPopup,
         setProgramPopup,
-        addedStudentData,
-        adminTeacherData,
+
         setSignUp,
         signUp,
         login,

@@ -6,7 +6,7 @@ import { TeacherContext } from "../../../../context/TeacherContext"
 
 const ImpormationHead = () => {
 
-    const {mode, setMode, change} = useContext(TeacherContext);
+    const {mode, setMode, change, setChange} = useContext(TeacherContext);
 
 
     return(
@@ -14,9 +14,15 @@ const ImpormationHead = () => {
             <div className="ImpormationHeadTitle">
                 <h2>{change === true ? "상세페이지" : "수정페이지"}</h2>
             </div>
-            <div className="ImpormationHeadBtn">
+
+                <div className="ImpormationHeadBtn">
                 <button onClick={() => setMode("nomal")}>목록으로 돌아가기</button>
+
+                <button onClick={() => setChange(false)}>수정</button>
+
             </div>
+
+
         </div>
     )
 }
